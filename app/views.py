@@ -1,9 +1,11 @@
 from app import app, models
 from flask import request, jsonify
+from flask import render_template
 
 @app.route('/')
 def index():
-    return "Hello, World!"
+#    return "Hello, World!"
+    return render_template("index.html")
 
 @app.route('/test/')
 def test():
